@@ -1,0 +1,50 @@
+.Header{
+  height:80px;
+  width:100%;
+  &-container{
+    height:70px;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5px;
+    margin-bottom:5px;
+    display:flex;
+    justify-content:space-between;
+    &__logo{
+      height:70px;
+      width:auto;
+    }
+    &-mainNavigation{
+      padding-top:30px;
+      &__list{
+        list-style: none;
+        display: inline-flex;
+      }
+      &__item{
+        color: $black;
+        font-size: 18px;
+        font-family:'ralewayregular';
+      }
+      &__link{
+        text-decoration: none;
+        margin-left:20px;
+        position: relative;
+
+       &:after {
+         content: "";
+         position: absolute;
+         height: 2px;
+         width: 100%;
+         bottom:-5px;
+         transition: all 0.4s ease-out;
+         background: $yellow;
+         left: 50%;
+         transform: translateX(-50%) scaleX(0);
+       }
+       &:hover:after {
+          transform: translateX(-50%) scaleX(1);
+        }
+      }
+    }
+  }
+}

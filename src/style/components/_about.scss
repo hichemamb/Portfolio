@@ -1,0 +1,49 @@
+@keyframes jump {
+  0%   {transform: translate3d(0,0,0)}
+  40%  {transform: translate3d(0,-10%,0)}
+  100% {transform: translate3d(0,-30%,0)}
+}
+
+.About{
+  height:calc(100vh - 80px);
+  width:100%;
+  background-color:$black;
+  position:relative;
+  &-container{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:70%;
+    height:auto;
+    text-align:center;
+    &__img{
+      height:80px;
+      margin-left:auto;
+      margin-right:auto;
+      margin-bottom:20px;
+      animation: jump .5s linear alternate infinite;
+    }
+    &__title{
+      color:$yellow;
+      font-size:30px;
+      font-family: 'ralewaymedium';
+      margin-bottom:20px;
+    }
+    &-text{
+      display:flex;
+      justify-content:center;
+      &__textOne{
+        color:$white;
+        font-size:25px;
+        font-family: 'ralewaylight';
+        margin-right:5px;
+      }
+      &__textTwo{
+        color:$white;
+        font-size:25px;
+        font-family: 'ralewaylight';
+      }
+    }
+  }
+}
