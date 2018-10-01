@@ -1,0 +1,282 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("raleway-regular-webfont.aac30210.woff2") format("woff2"), url("raleway-regular-webfont.76f11f91.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaylight';
+  src: url("raleway-light-webfont.c14cfcf6.woff2") format("woff2"), url("raleway-light-webfont.7fb55921.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaymedium';
+  src: url("raleway-medium-webfont.455f926f.woff2") format("woff2"), url("raleway-medium-webfont.18c2d4ab.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0; }
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1; }
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1; }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+@keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0; }
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1; }
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1; }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+.Header {
+  height: 80px;
+  width: 100%; }
+  .Header-container {
+    height: 70px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .Header-container__logo {
+      height: 70px;
+      width: auto; }
+    .Header-container-mainNavigation {
+      padding-top: 30px; }
+      .Header-container-mainNavigation__list {
+        list-style: none;
+        display: -ms-inline-flexbox;
+        display: inline-flex; }
+      .Header-container-mainNavigation__item {
+        color: #000000;
+        font-size: 18px;
+        font-family: 'ralewayregular'; }
+      .Header-container-mainNavigation__link {
+        text-decoration: none;
+        margin-left: 20px;
+        position: relative; }
+        .Header-container-mainNavigation__link:after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          bottom: -5px;
+          -webkit-transition: all 0.4s ease-out;
+          -o-transition: all 0.4s ease-out;
+          transition: all 0.4s ease-out;
+          background: #FFAA00;
+          left: 50%;
+          -webkit-transform: translateX(-50%) scaleX(0);
+              -ms-transform: translateX(-50%) scaleX(0);
+                  transform: translateX(-50%) scaleX(0); }
+        .Header-container-mainNavigation__link:hover:after {
+          -webkit-transform: translateX(-50%) scaleX(1);
+              -ms-transform: translateX(-50%) scaleX(1);
+                  transform: translateX(-50%) scaleX(1); }
+
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  40% {
+    -webkit-transform: translate3d(0, -10%, 0);
+            transform: translate3d(0, -10%, 0); }
+  100% {
+    -webkit-transform: translate3d(0, -30%, 0);
+            transform: translate3d(0, -30%, 0); } }
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  40% {
+    -webkit-transform: translate3d(0, -10%, 0);
+            transform: translate3d(0, -10%, 0); }
+  100% {
+    -webkit-transform: translate3d(0, -30%, 0);
+            transform: translate3d(0, -30%, 0); } }
+
+.About {
+  height: calc(100vh - 80px);
+  width: 100%;
+  background-color: #000000;
+  position: relative; }
+  .About-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 70%;
+    height: auto;
+    text-align: center; }
+    .About-container__img {
+      height: 80px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      -webkit-animation: jump .5s linear alternate infinite;
+              animation: jump .5s linear alternate infinite; }
+    .About-container__title {
+      color: #FFAA00;
+      font-size: 30px;
+      font-family: 'ralewaymedium';
+      margin-bottom: 20px; }
+    .About-container-text {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center; }
+      .About-container-text__textOne {
+        color: #FFFFFF;
+        font-size: 25px;
+        font-family: 'ralewaylight';
+        margin-right: 5px; }
+      .About-container-text__textTwo {
+        color: #FFFFFF;
+        font-size: 25px;
+        font-family: 'ralewaylight'; }
+
+.Projects {
+  height: auto;
+  width: 100%;
+  background-color: #FFFFFF; }
+  .Projects-container {
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .Projects-container__item {
+      height: 400px;
+      width: 48%;
+      margin-top: 50px;
+      margin-right: 20px;
+      background-image: url("meetches.44e4864d.jpg");
+      background-size: cover;
+      background-position: center 0;
+      background-repeat: no-repeat;
+      -webkit-box-shadow: 1px 1px 8px 2px #DCDCDC;
+              box-shadow: 1px 1px 8px 2px #DCDCDC;
+      position: relative; }
+      .Projects-container__item__overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #FFAA00;
+        z-index: 1; }
+        .Projects-container__item__overlay__contained {
+          height: 100%;
+          width: 100%;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: column;
+              flex-direction: column;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+        .Projects-container__item__overlay__title {
+          font-size: 30px;
+          color: #FFFFFF;
+          font-family: 'ralewaymedium'; }
+        .Projects-container__item__overlay__description {
+          font-size: 20px;
+          color: #FFFFFF;
+          font-family: 'ralewaylight'; }
+        .Projects-container__item__overlay__button {
+          padding: 10px;
+          border: 1px solid #FFFFFF;
+          border-radius: 15px;
+          background-color: #FFAA00;
+          color: #FFFFFF;
+          font-size: 20px;
+          font-family: 'ralewayregular';
+          -webkit-transition: all 0.4s ease;
+          -o-transition: all 0.4s ease;
+          transition: all 0.4s ease; }
+          .Projects-container__item__overlay__button:hover {
+            background-color: #FFFFFF;
+            color: #FFAA00; }
