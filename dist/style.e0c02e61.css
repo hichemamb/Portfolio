@@ -1,0 +1,305 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("raleway-regular-webfont.aac30210.woff2") format("woff2"), url("raleway-regular-webfont.76f11f91.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaylight';
+  src: url("raleway-light-webfont.c14cfcf6.woff2") format("woff2"), url("raleway-light-webfont.7fb55921.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaymedium';
+  src: url("raleway-medium-webfont.455f926f.woff2") format("woff2"), url("raleway-medium-webfont.18c2d4ab.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0; }
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1; }
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1; }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+@keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0; }
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1; }
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1; }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+.Header {
+  height: 80px;
+  width: 100%; }
+  .Header-container {
+    height: 70px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .Header-container__logo {
+      height: 70px;
+      width: auto; }
+    .Header-container-mainNavigation {
+      padding-top: 30px; }
+      .Header-container-mainNavigation__list {
+        list-style: none;
+        display: -ms-inline-flexbox;
+        display: inline-flex; }
+      .Header-container-mainNavigation__item {
+        color: #000000;
+        font-size: 18px;
+        font-family: 'ralewayregular'; }
+      .Header-container-mainNavigation__link {
+        text-decoration: none;
+        margin-left: 20px;
+        position: relative; }
+        .Header-container-mainNavigation__link:after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          bottom: -5px;
+          -webkit-transition: all 0.4s ease-out;
+          -o-transition: all 0.4s ease-out;
+          transition: all 0.4s ease-out;
+          background: #FFAA00;
+          left: 50%;
+          -webkit-transform: translateX(-50%) scaleX(0);
+              -ms-transform: translateX(-50%) scaleX(0);
+                  transform: translateX(-50%) scaleX(0); }
+        .Header-container-mainNavigation__link:hover:after {
+          -webkit-transform: translateX(-50%) scaleX(1);
+              -ms-transform: translateX(-50%) scaleX(1);
+                  transform: translateX(-50%) scaleX(1); }
+
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  40% {
+    -webkit-transform: translate3d(0, -10%, 0);
+            transform: translate3d(0, -10%, 0); }
+  100% {
+    -webkit-transform: translate3d(0, -30%, 0);
+            transform: translate3d(0, -30%, 0); } }
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  40% {
+    -webkit-transform: translate3d(0, -10%, 0);
+            transform: translate3d(0, -10%, 0); }
+  100% {
+    -webkit-transform: translate3d(0, -30%, 0);
+            transform: translate3d(0, -30%, 0); } }
+
+.About {
+  height: calc(100vh - 80px);
+  width: 100%;
+  background-color: #000000;
+  position: relative; }
+  .About-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 70%;
+    height: auto;
+    text-align: center; }
+    .About-container__img {
+      height: 80px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      -webkit-animation: jump .5s linear alternate infinite;
+              animation: jump .5s linear alternate infinite; }
+    .About-container__title {
+      color: #FFAA00;
+      font-size: 30px;
+      font-family: 'ralewaymedium';
+      margin-bottom: 20px; }
+    .About-container-text {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center; }
+      .About-container-text__textOne {
+        color: #FFFFFF;
+        font-size: 25px;
+        font-family: 'ralewaylight';
+        margin-right: 5px; }
+      .About-container-text__textTwo {
+        color: #FFFFFF;
+        font-size: 25px;
+        font-family: 'ralewaylight'; }
+
+#Meetches {
+  background-image: url("meetches.44e4864d.jpg");
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat; }
+
+#fullScreen {
+  background-image: url("fullscreen.0ae6a037.png");
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat; }
+
+#Shingeki {
+  background-image: url("shingeki.5e73975a.png");
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat; }
+
+#psgReal {
+  background-image: url("psgreal.2f40683a.png");
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat; }
+
+#Nespresso {
+  background-image: url("nespresso.3a856302.png");
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat; }
+
+.Projects {
+  height: auto;
+  width: 100%;
+  background-color: #FFFFFF; }
+  .Projects-container {
+    height: auto;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin-left: auto;
+    margin-right: auto; }
+    .Projects-container-item {
+      width: 310px;
+      height: auto;
+      margin-bottom: 30px; }
+      .Projects-container-item__top {
+        width: 310px;
+        height: 200px;
+        -webkit-box-shadow: 1px 1px 8px 2px #DCDCDC;
+                box-shadow: 1px 1px 8px 2px #DCDCDC; }
+      .Projects-container-item__bottom {
+        width: 310px;
+        height: 100px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        margin-top: 10px; }
+        .Projects-container-item__bottom__leftBar {
+          height: 100px;
+          width: 10px;
+          background-color: #FFAA00;
+          border-radius: 10px; }
+        .Projects-container-item__bottom__infos {
+          width: 270px;
+          height: 80px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: column;
+              flex-direction: column;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+          .Projects-container-item__bottom__infos__date {
+            font-size: 16px;
+            color: #000000;
+            font-family: 'ralewaylight'; }
+          .Projects-container-item__bottom__infos__name {
+            font-size: 25px;
+            color: #000000;
+            font-family: 'ralewaymedium'; }
+          .Projects-container-item__bottom__infos__more {
+            font-size: 14px;
+            color: #FFAA00;
+            font-family: 'ralewaylight'; }
